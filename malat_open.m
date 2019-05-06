@@ -8,6 +8,6 @@ end
 
 malat_fid = fopen(filename,'w');
 
-fprintf(malat_fid,'\\newcommand\\M[1]{\\csname matlab-#1\\endcsname}\n');
+fprintf(malat_fid,'\\newcommand\\M[1]{\\csname\\detokenize{matlab-#1}\\endcsname}\n');
 
 end
