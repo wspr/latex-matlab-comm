@@ -1,0 +1,16 @@
+\documentclass{article}
+
+% check Matlab has been run: (can safely delete this if you know you'll always remember to do it)
+\IfFileExists{example_malat_defs.sty}{}{\PackageError{MALAT}{^^J^^J\space\space\space\space Run "example_malat.m" in Matlab first.^^J^^J}{}}
+
+\usepackage{example_malat_defs}
+
+\begin{document}
+
+If $a=\M{a}$, then
+\[
+  b = 10a^2 = \M{b} \,.
+\]
+Note that $\pi\approx\M{PI}$.
+
+\end{document}
