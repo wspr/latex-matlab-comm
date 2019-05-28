@@ -17,14 +17,14 @@ end
 if isnumeric(v)
   if nargin > 2
     fprintf(1,['%s = %',d,'\n'],s,v);
-    malat_fprintf(['\\expandafter\\def\\csname matlab-%s\\endcsname{%',d,'}\n'],s,v);
+    malat_fprintf(['\\expandafter\\def\\csname malat-\\malatprefix-%s\\endcsname{%',d,'}\n'],s,v);
   else
     fprintf(1,'%s = %s\n',s,num2str(v));
-    malat_fprintf('\\expandafter\\def\\csname matlab-%s\\endcsname{%s}\n',s,num2str(v));
+    malat_fprintf('\\expandafter\\def\\csname malat-\\malatprefix-%s\\endcsname{%s}\n',s,num2str(v));
   end
 else
   fprintf(1,'%s = %s\n',s,v);
-  malat_fprintf('\\expandafter\\def\\csname matlab-%s\\endcsname{%s}\n',s,v);
+  malat_fprintf('\\expandafter\\def\\csname malat-\\malatprefix-%s\\endcsname{%s}\n',s,v);
 end
 
   function malat_fprintf(varargin)
